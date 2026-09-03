@@ -1,0 +1,37 @@
+[project]
+name = "consumer-credit-risk"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "flaviohenriquehb777", email = "flaviohenriquehb777@outlook.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "imbalanced-learn>=0.14.2",
+    "ipykernel>=7.3.0",
+    "joblib>=1.6.0",
+    "jupyter>=1.1.1",
+    "lightgbm>=4.7.0",
+    "lime>=0.2.0.1",
+    "matplotlib>=3.11.1",
+    "numpy>=2.4.6",
+    "optuna>=4.9.0",
+    "pandas>=3.0.5",
+    "pytest>=9.1.1",
+    "python-docx>=1.2.0",
+    "python-dotenv>=1.2.3",
+    "scikit-learn>=1.9.0",
+    "scipy>=1.17.1",
+    "seaborn>=0.13.2",
+    "shap>=0.51.0",
+    "statsmodels>=0.15.0",
+    "streamlit>=1.62.0",
+    "xgboost>=3.2.0",
+]
+
+[project.scripts]
+consumer-credit-risk = "consumer_credit_risk:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"

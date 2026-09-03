@@ -1,0 +1,23 @@
+SEED: 42
+
+DADOS:
+  CAMINHO_RAW: "data/raw/credito_tratado.csv"
+  CAMINHO_INTERIM: "data/interim/"
+  CAMINHO_PROCESSADO: "data/processed/"
+  ARQUIVO_ALVO: "inadimplente_2anos"
+
+MODELO:
+  ROC_AUC_MINIMO: 0.85
+  FOLDS_CV: 5
+  PONTO_CORTE_PADRAO: 0.5
+
+CUSTOS:
+  CUSTO_FALSO_NEGATIVO: 10
+  CUSTO_FALSO_POSITIVO: 1
+
+PASTAS:
+  NOTEBOOKS_CLEAN: "notebooks/clean/"
+  NOTEBOOKS_EXECUTED: "notebooks/executed/"
+  MODELOS: "models/"
+  RELATORIOS: "reports/evaluations/"
+  GRAFICOS: "reports/figures/"

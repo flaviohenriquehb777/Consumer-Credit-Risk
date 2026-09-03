@@ -1,0 +1,11 @@
+# ========== APP STREAMLIT: RISCO DE CRÉDITO XGBOOST CAMPEÃO ==========
+# Versões PINNADAS para que QUALQUER pessoa do time instale exatamente as
+# mesmas versões que foram usadas durante o treinamento e a exportação.
+# Não use versões mais novas sem rodar os self-tests do deploy!
+
+streamlit>=1.35,<1.41
+xgboost>=2.0.3,<2.2
+scikit-learn>=1.5.1,<1.7
+shap>=0.45.1,<0.52
+pandas>=2.2,<2.4
+numpy>=1.26,<2.1
