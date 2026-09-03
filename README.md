@@ -1,7 +1,9 @@
 # <p align="center">Consumer Credit Risk — Aurora</p>
 
 <p align="center">
-  <img alt="Crédito · Aurora" src="https://img.shields.io/badge/Cr%C3%A9dito-Aurora-1F3A5F?style=for-the-badge"/>
+  <a href="https://auroraplanejamento.com.br/aurora-credito/" target="_blank" rel="noopener noreferrer">
+    <img alt="Crédito · Aurora" src="https://img.shields.io/badge/Cr%C3%A9dito-Aurora-1F3A5F?style=for-the-badge"/>
+  </a>
   <a href="LICENSE.md">
     <img alt="Licença MIT" src="https://img.shields.io/github/license/flaviohenriquehb777/Consumer-Credit-Risk?style=for-the-badge&logo=opensourceinitiative&color=27ae60"/>
   </a>
@@ -32,7 +34,7 @@
 
 ---
 
-## 📑 Sumário Clicável
+## 📑 Sumário
 
 - [1. Visão Geral do Modelo](#1-visão-geral-do-modelo)
 - [2. Objetivos da Análise](#2-objetivos-da-análise)
