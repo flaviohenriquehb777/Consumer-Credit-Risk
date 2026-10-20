@@ -1,0 +1,6 @@
+Modelo,strategy,CV ROC AUC (média),CV ROC AUC (std),CV F1 (média),CV F1 (std),CV Acurácia (média),CV Custo Total OOF (média por fold),CV Custo Total OOF (5 folds somado),OOF ROC AUC (sobre as predições agregadas),OOF F1 (agregado),OOF Accuracy (agregado),max_depth,class_weight,min_samples_leaf,n_estimators,learning_rate,min_child_weight,scale_pos_weight,subsample,colsample,min_child_samples,num_leaves
+XGB md=4 lr=0.03 mcw=80,,0.86415,0.00375,0.33855,0.00467,0.79856,7630.2,38151,0.86404,0.33853,0.79856,4,,,500.0,0.03,80.0,13.96,0.9,0.85,,
+LGB md=5 lr=0.03 mcs=150,,0.86364,0.00392,0.33998,0.00413,0.80052,7622.0,38110,0.86353,0.33995,0.80052,5,,,500.0,0.03,,13.96,,,150.0,31.0
+RF d=12 cw=balanced_1_14,,0.86254,0.00366,0.34162,0.00454,0.80332,7629.4,38147,0.86239,0.3416,0.80332,12,balanced_1_14,30.0,300.0,,,,,,,
+DecisionTree d=7,,0.84982,0.00377,0.25828,0.01584,0.93532,12707.2,63536,0.85041,0.25858,0.93532,7,,50.0,,,,,,,,
+Dummy prior,prior,0.5,0.0,0.0,0.0,0.93316,15040.0,75200,0.5,0.0,0.93316,,,,,,,,,,,

@@ -1,0 +1,4 @@
+Modelo,"Limiar (aprendido NO TREINO, aplicado cegamente)",Custo R$ Holdout (real cego),Custo por Cliente (R$ Holdout),FN Holdout / FP Holdout,Taxa Aprovação,Inadimplência Carteira Aprovada,Economia vs Pol. Atual Holdout (R$),Economia vs Pol. Atual Holdout (%)
+DecisionTree (d=7),0.08,"R$ 6,566,500.00",R$ 175.11,"680 / 6,333",78.24%,2.32%,"R$ 5,963,500.00",47.59%
+"XGBoost best (4, lr=0.03, mcw=80)",0.56,"R$ 6,179,000.00",R$ 164.77,"690 / 5,458",80.60%,2.28%,"R$ 6,351,000.00",50.69%
+🔥 Política ATUAL (aprova TODOS),—,"R$ 12,530,000.00",R$ 334.13,"2,506 / 0","100,00%",6.68%,"R$ 0,00","0,00%"

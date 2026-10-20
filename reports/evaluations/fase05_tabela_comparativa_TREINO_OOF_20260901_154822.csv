@@ -1,0 +1,5 @@
+Modelo,Limiar Ótimo (aprendido no OOF treino),Custo Total Ótimo (R$),Custo por Cliente (R$),N_FN (perda principal),N_FP (perda margem),Perda Principal (R$),Perda Margem (R$),Taxa de Aprovação,Inadimplência da Carteira Aprovada,Economia vs Política Atual (R$),Economia vs Política Atual (%)
+DecisionTree (d=7),0.08,"R$ 19,823,500.00",R$ 176.21,"2,099","18,657","R$ 10,495,000.00","R$ 9,328,500.00",78.60%,2.37%,"R$ 17,776,500.00",47.28%
+"XGBoost best (4, lr=0.03, mcw=80)",0.56,"R$ 18,798,000.00",R$ 167.09,"2,103","16,566","R$ 10,515,000.00","R$ 8,283,000.00",80.46%,2.32%,"R$ 18,802,000.00",50.01%
+🔥 Política ATUAL (aprova TODOS),—,"R$ 37,600,000.00",R$ 334.22,"7,520",0,"R$ 37,600,000.00",R$ 0.00,"100,00%",6.68%,"R$ 0,00","0,00%"
+❌ Política: NEGAR TODOS,0 (sempre negar),"R$ 52,490,000.00",R$ 466.58,0,"104,980",R$ 0.00,"R$ 52,490,000.00","0,00%",—,"R$ -14,890,000.00",-39.60%

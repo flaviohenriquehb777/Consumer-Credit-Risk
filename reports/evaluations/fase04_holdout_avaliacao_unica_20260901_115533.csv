@@ -1,0 +1,6 @@
+Modelo,Th ótimo (vindo do OOF treino),ROC AUC teste,PR AUC teste,F1 teste (th=0.5),Acurácia teste (0.5),Brier teste,Custo FN*10+FP th=0.5,FN th=0.5,FP th=0.5,"Economia vs Pol. Atual (%, th=0.5)",Custo FN*10+FP th ÓTIMO,FN th ÓTIMO,FP th ÓTIMO,"Economia vs Pol. Atual (%, th ÓTIMO)"
+"XGBoost best ({'max_depth': 4, 'learning_rate': 0.03, 'min_child_weight': 80})",0.558,0.86956,0.40854,0.33993,0.79909,0.13954,12628,566,6968,49.61,12368,686,5508,50.65
+"LightGBM best ({'max_depth': 5, 'learning_rate': 0.03, 'min_child_samples': 150, 'num_leaves': 31})",0.543,0.86878,0.40417,0.34081,0.80101,0.13783,12655,577,6885,49.5,12526,671,5816,50.02
+"RandomForest best (d=12, cw=balanced_1_14)",0.57,0.8663,0.39853,0.34259,0.80309,0.13689,12622,582,6802,49.63,12491,769,4801,50.16
+DecisionTree best (d=7),0.083,0.85263,0.35767,0.28452,0.93589,0.05033,20656,2028,376,17.57,13133,680,6333,47.59
+Dummy (prior),0.5,0.5,0.06683,0.0,0.93317,0.06236,25060,2506,0,0.0,25060,2506,0,0.0

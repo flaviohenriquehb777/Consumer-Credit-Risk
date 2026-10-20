@@ -27,8 +27,8 @@
   <a href="https://github.com/flaviohenriquehb777/Consumer-Credit-Risk/releases">
     <img alt="Release" src="https://img.shields.io/github/v/release/flaviohenriquehb777/Consumer-Credit-Risk?style=for-the-badge&display_name=tag&sort=semver"/>
   </a>
-  <a href="https://github.com/flaviohenriquehb777/Consumer-Credit-Risk/actions">
-    <img alt="CI Status" src="https://img.shields.io/badge/CI%20--%20Smoke%20Test-Pass%20%E2%9C%85-brightgreen?style=for-the-badge"/>
+  <a href="https://github.com/flaviohenriquehb777/Consumer-Credit-Risk/actions/workflows/ci.yml">
+    <img alt="CI — Smoke Test" src="https://github.com/flaviohenriquehb777/Consumer-Credit-Risk/actions/workflows/ci.yml/badge.svg?branch=main"/>
   </a>
 </p>
 
@@ -192,6 +192,11 @@ XGBoost campeão: menor custo OOF treino em limiar 0,56
                  validação cega holdout: economia = 50,65% vs. “aprovar todos” ✅
 ```
 
+<p align="center">
+  <img src="reports/figures/fase05_custo_vs_limiar_TREINO_OOF_DT_XGB.png" alt="Custo total (R$) por limiar de decisão — Árvore de Decisão vs XGBoost (treino OOF)" width="780">
+</p>
+<p align="center"><sub><b>Figura 1</b> — Custo total (R$) por limiar de decisão, calculado só no treino (OOF). O mínimo da curva do XGBoost ocorre no limiar 0,56.</sub></p>
+
 ### 6.3 Ranking global de features — Top 10 (por |mean SHAP value|, holdout 37.500)
 
 | Rank | Variável | |mean SHAP|| Observação |
@@ -207,8 +212,25 @@ XGBoost campeão: menor custo OOF treino em limiar 0,56
 | 9 | razao_divida | 0,088 | Alavancagem |
 | 10 | renda_mensal | 0,060 | Capturada via renda_por_dependente / sobra_caixa |
 
-Gráficos oficiais (beeswarm summary top10, bar, dependence 4 e waterfalls locais)
-ficam salvos em `reports/figures/` pelo script `src/models/fase06_analise_shap.py`.
+<p align="center">
+  <img src="reports/figures/fase06_shap_summary_beeswarm_top10_holdout.png" alt="SHAP Summary Beeswarm — Top 10 variáveis (holdout, 37.500 clientes)" width="840">
+</p>
+<p align="center"><sub><b>Figura 2</b> — SHAP beeswarm no holdout. Eixo X = impacto no log-odds de inadimplência; cor = valor da variável (vermelho = alto, azul = baixo). Uso do limite rotativo alto desloca a carteira para a direita (mais risco).</sub></p>
+
+A análise SHAP completa é gerada por [`src/models/fase06_analise_shap.py`](src/models/fase06_analise_shap.py) e fica versionada em [`reports/figures/`](reports/figures/) para auditoria:
+
+| Gráfico | Arquivo |
+|---|---|
+| Ranking global (barras, top 10) | [`fase06_shap_bar_top10_holdout.png`](reports/figures/fase06_shap_bar_top10_holdout.png) |
+| Dependence — uso do limite rotativo | [`fase06_shap_dependence_uso_limite_rotativo_holdout.png`](reports/figures/fase06_shap_dependence_uso_limite_rotativo_holdout.png) |
+| Dependence — atrasos 30–59 dias | [`fase06_shap_dependence_atrasos_30_59_dias_holdout.png`](reports/figures/fase06_shap_dependence_atrasos_30_59_dias_holdout.png) |
+| Dependence — atrasos 90+ dias | [`fase06_shap_dependence_atrasos_90_mais_dias_holdout.png`](reports/figures/fase06_shap_dependence_atrasos_90_mais_dias_holdout.png) |
+| Dependence — idade | [`fase06_shap_dependence_idade_holdout.png`](reports/figures/fase06_shap_dependence_idade_holdout.png) |
+| Waterfall local — calote real negado (TP) | [`fase06_shap_waterfall_A_CALOTE_NEGADO_TP_holdout.png`](reports/figures/fase06_shap_waterfall_A_CALOTE_NEGADO_TP_holdout.png) |
+| Waterfall local — adimplente aprovado (TN) | [`fase06_shap_waterfall_B_ADIMPLENTE_APROVADO_TN_holdout.png`](reports/figures/fase06_shap_waterfall_B_ADIMPLENTE_APROVADO_TN_holdout.png) |
+| Waterfall local — cliente borderline (0,55 vs. limiar 0,56) | [`fase06_shap_waterfall_C_BORDERLINE_holdout.png`](reports/figures/fase06_shap_waterfall_C_BORDERLINE_holdout.png) |
+
+As tabelas numéricas de todas as fases (métricas, curvas de custo, ranking SHAP) ficam em [`reports/evaluations/`](reports/evaluations/).
 
 ### 6.4 Registro de versão — Respostas do Case (Aurora)
 

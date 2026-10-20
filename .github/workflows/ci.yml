@@ -1,0 +1,34 @@
+name: CI
+
+# Roda a cada push/PR na main e tambem pode ser disparado manualmente pela aba Actions.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  smoke-deploy:
+    name: Smoke test do modelo de deploy (XGBoost + preparo + SHAP)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11 (mesma versao do .python-version)
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias do app de deploy (versoes pinadas)
+        run: pip install -r app_streamlit/requirements.txt
+
+      # Valida, a cada commit, que os pickles versionados em app_streamlit/ continuam
+      # carregando e produzindo as MESMAS decisoes: APROVAR (6,22%), RECUSAR (96,54%)
+      # e missing + codigo de sistema 98 (97,69%). Se o pipeline de producao quebrar,
+      # o build fica vermelho antes de chegar na equipe.
+      - name: Rodar smoke test end-to-end do app
+        run: python app_streamlit/_smoke_test_app.py

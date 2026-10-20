@@ -1,0 +1,16 @@
+feature,importance
+atrasos_90_mais_dias,0.27938175
+atrasos_30_59_dias,0.2351668
+uso_limite_rotativo,0.17058463
+atrasos_60_89_dias,0.14912222
+financiamentos_imobiliarios,0.043488543
+idade,0.022785455
+linhas_credito_abertas,0.020587636
+sobra_caixa,0.018044764
+razao_divida,0.016956553
+renda_mensal,0.016158247
+renda_por_dependente,0.014968275
+dependentes,0.012755155
+renda_ausente,0.0
+cod_sistema_atrasos,0.0
+dependentes_ausentes,0.0

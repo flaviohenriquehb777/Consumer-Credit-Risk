@@ -1,0 +1,6 @@
+Modelo,CV ROC AUC (média ± std),CV ROC AUC (train mean),CV Acurácia (média ± std),CV Acurácia (train mean)
+RF best d=12 balanced_subsamp,0.8621 ± 0.0033,0.9001,0.8247 ± 0.0029,0.8333
+XGBoost,0.8612 ± 0.0033,0.8993,0.8080 ± 0.0023,0.8164
+LightGBM,0.8595 ± 0.0039,0.9148,0.8155 ± 0.0019,0.8282
+DT best d=8,0.8490 ± 0.0045,0.8636,0.9355 ± 0.0007,0.9389
+Dummy prior,0.5000 ± 0.0000,0.5,0.9332 ± 0.0000,0.9332

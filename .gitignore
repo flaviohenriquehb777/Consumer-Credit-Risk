@@ -59,9 +59,12 @@ data/processed/*
 models/*
 !models/.gitkeep
 
-# Relatorios gerados
+# Relatorios gerados — versionamos apenas os ENTREGAVEIS finais (evidencias do case):
+# tabelas de avaliacao (.csv) e graficos (.png). Qualquer outro artefato temporario fica fora.
 reports/evaluations/*
 reports/figures/*
+!reports/evaluations/*.csv
+!reports/figures/*.png
 !reports/evaluations/.gitkeep
 !reports/figures/.gitkeep
 
