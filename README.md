@@ -213,7 +213,7 @@ ficam salvos em `reports/figures/` pelo script `src/models/fase06_analise_shap.p
 ### 6.4 Registro de versão — Respostas do Case (Aurora)
 
 O documento `.docx` com as 5 perguntas de negócio respondidas com números do projeto
-está em [docs/RESPOSTAS_DO_CASE_Aurora_Consumer_Credit_Risk.docx](docs/RESPOSTAS_DO_CASE_Aurora_Consumer_Credit_Risk.docx).
+está em [reports/RESPOSTAS_DO_CASE_Aurora_Consumer_Credit_Risk.docx](reports/RESPOSTAS_DO_CASE_Aurora_Consumer_Credit_Risk.docx).
 
 ---
 

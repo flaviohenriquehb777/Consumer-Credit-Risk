@@ -2,7 +2,7 @@
 Gerador do arquivo .docx do CASE com as 5 perguntas respondidas,
 usando evidências reais do projeto Consumer Credit Risk (Aurora).
 
-Saída: docs/RESPOSTAS_DO_CASE_Aurora_Consumer_Credit_Risk.docx
+Saída: reports/RESPOSTAS_DO_CASE_Aurora_Consumer_Credit_Risk.docx
 """
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
 ROOT = Path(__file__).resolve().parents[2]  # repo root
-OUT_DIR = ROOT / "docs"
+OUT_DIR = ROOT / "reports"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 OUT_FILE = OUT_DIR / "RESPOSTAS_DO_CASE_Aurora_Consumer_Credit_Risk.docx"
 
